@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d282e338c6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p> <span id="webdeveloper">'Web Developer'</span></p>
+            <h1><span id="intro"> Hi, I'm <span id="name">RAJAT NIGAM </span> <br> from India...<h1>  
+            </div>
+        </div>  
+    </div>
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"><img src="4A299EE5-483F-419E-BE93-C192C3D59A68.JPG" alt=" "></div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><p>I'm Rajat Nigam who aims to find an exciting and challening entry level position in the C.S. industry alongside a company who will continiously motivate and drive me to do my best and improve my skills and abilities in order to able to assist the company in achieving missions and goals... </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                    <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                    <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front End developer  </span> <br> html <br>css3 <br>bootstapping </li>
+                        <li><span>Back-End Developer </span> <br> JavaScrpit <br>PhP</li>
+                        <li><span> Programmer</span><br>Java (Object Oriented) <br>Python <br> C Programming</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Programming Experience </span> <br> Working with Java programming for more than one year seeking for projects.</li>
+                        <li><span>Web Development Experience</span> <br> Certification in full stack Web Development using the HTML5 Css3 and JavaScrpit. Designed a fully responsive website and currently working on another project.</li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span> Schooling</span> <br>Completed my Schooling from Colonel's Brightland Public School, Agra. </li>
+                        <li><span>Graduation </span> <br>Currently persuing Btech in computer science stream  from GLA University Mathura.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div> 
+   <div id="services">
+    <div class="container">
+         <h1 class="sub-title">My Services</h1>
+         <div class="services-list">
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Web Design</h2>
+                <p>just started as a full stack webdeveloper by using scripting languages like html5 css3 for the front-end and JavaScrpit PHP for the backend. My first priorty is to provide simplest and a updated website ever. In the case of webdevelopment I work on the policy "UPDATE AND UPGRADE"...</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code-branch"></i>
+                <h2>Software Developer</h2>
+                <p>Dedicated to the quest of developing the solutions that leverage on the best practice teachnologies to deliver over the top user experience. Its been a year working with Java with object Oriented programming and  Python well prepared for developing softwares...</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone-volume"></i>
+                <h2>Free Lancer</h2>
+                <p> Mentioning all my technical skills working with for more than one years. I work as a free-lancer and  the main aim is to provide better experience to the costumer in a short period of time with full stisfaction... </p>
+                <a href="#">Learn more</a>
+            </div>
+         </div>
+    </div>
+   </div>
+   <div id="portfolio">
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>rajatmug@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i>+91-7310868157</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/nigamrajat07"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/rajat-nigam-aa3923222"><i class="fa-brands fa-linkedin"></i></a>
+        
+                </div>
+                <a href=" " class="btn btn2" download>Download CV</a>
+            </div>
+            <div class="contact-right">
+<form name="submit-to-google-sheet">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+   <button type="submit" class="btn btn2" >Submit</button>
+</form>
+<span id="msg"> </span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-solid fa-copyright"></i> Rajat's personal portfolio</p>
+    </div>
+</div>
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+}
+for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+}
+   </script>
+   <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right  = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right  = "-200px";
+    }
+   </script> 
+   
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzPCOeqTnLPK-9kE56NF31Per8zSy9ZWnfatrCraGDUDQJceNrRi0ombNorNdfKVBRIlg/exec'
+  const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = " "
+        },2000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+   
+
+</body>
+</html>
